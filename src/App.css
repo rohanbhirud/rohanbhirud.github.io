@@ -1,0 +1,131 @@
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.8; /* Increased line height for better readability */
+  margin: 0;
+  padding: 0 20px; /* Added horizontal padding */
+  background-color: #f0f2f5; /* Light grey background */
+  color: #333;
+}
+
+.portfolio-container {
+  max-width: 1200px; /* Increased max-width for slightly wider content */
+  margin: 10px auto; /* Reduced top/bottom margin */
+  padding: 0; /* Consistent padding on the sides */
+}
+
+.header {
+  background: #1a237e; /* Deep indigo primary color */
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center; /* Center align header content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the header */
+  margin-bottom: 10px; /* Reduced bottom margin */
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header p {
+  margin: 5px 0;
+}
+
+.header a {
+  color: #bbdefb; /* Light blue for links */
+  text-decoration: none;
+  margin: 0 15px; /* Increased margin between header links */
+}
+
+.header a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* General Section Styling */
+section {
+  background: #fff;
+  padding: 20px 15px;
+  margin-bottom: 15px; /* Reduced bottom margin */
+  border-radius: 5px; /* Slightly smaller border radius */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for sections */
+}
+
+section h2 { /* Section Titles */
+  color: #3f51b5; /* Indigo secondary color for titles */
+  border-bottom: 2px solid #c5cae9; /* Lighter indigo underline */
+  padding-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 20px; /* Reduced margin below titles */
+}
+
+ul { /* Default list styling */
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.skills-section ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjusted min-width for skills */
+  gap: 10px;
+}
+
+.skills-section li {
+  background: #e8eaf6; /* Very light indigo for skill items */
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Styling for individual items in sections */
+.experience-item,
+.education-item,
+.project-item,
+.award-item { /* Reduced bottom margin for items */
+  margin-bottom: 20px; /* Increased bottom margin for items */
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #eee;
+}
+
+.experience-item:last-child,
+.education-item:last-child,
+.project-item:last-child, /* Corrected to match the comment */
+.award-item:last-child {
+  border-bottom: none;
+}
+
+.experience-item h3,
+.education-item h3,
+.project-item h3 {
+  margin: 0 0 5px 0;
+  color: #303f9f; /* Darker indigo for item titles */
+  font-size: 1.2em; /* Slightly larger font for item titles */
+}
+
+.experience-item p {
+  margin: 0 0 10px 0;
+  font-style: italic;
+  color: #666;
+} /* Corrected closing brace */
+
+.experience-item ul li,
+.education-item ul li {
+  margin-bottom: 5px;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #777;
+  font-size: 0.8em; /* Slightly smaller font size */
+  margin-top: 30px; /* Added margin above the footer */
+}
+
+.@media (max-width: 768px) {
+  .skills ul {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}

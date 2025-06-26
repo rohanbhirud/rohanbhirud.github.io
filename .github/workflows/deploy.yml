@@ -24,4 +24,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: github.com/${{ github.repository }}
         run: |
-          npx gh-pages -d build -u "github-actions[bot] <github-actions[bot]@users.noreply.github.com>" -r https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          npx gh-pages -d build -u github-actions[bot] <github-actions[bot]@users.noreply.github.com> -r https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git

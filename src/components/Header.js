@@ -12,29 +12,31 @@ import Button from '@mui/material/Button';
 
 function Header({ name, linkedin, github, phone, email }) { // Receive the email prop
   return (
-    <AppBar position="static">
+    <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
       <Toolbar> {/* This Toolbar holds your name and contact info */}
         <Box sx={{ flexGrow: 1 }}>
- <Typography variant="h4" component="div"> {/* Increased font size */}
-          {name}
-        </Typography>
-        <Typography variant="subtitle1" component="div">
-          Software Engineer
-        </Typography>
- </Box>
+          <Typography variant="h4" component="div" sx={{ mt: 2 }}> {/* Added margin top */}
+            {name}
+          </Typography>
+          <Typography variant="subtitle1" component="div">
+            Software Engineer
+          </Typography>
+        </Box>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
- <Box sx={{ display: 'flex', alignItems: 'center', mr: 2 }}>
-          <EmailIcon sx={{ mr: 0.5 }} />
-          <Typography variant="body2" sx={{ mr: 2 }}>{email}</Typography> {/* Display email */}
- </Box>
+          <Box sx={{ display: 'flex', alignItems: 'center', mr: 2 }}>
+            <EmailIcon sx={{ mr: 0.5 }} />
+            <Typography variant="body2" sx={{ mr: 2 }}>{email}</Typography> {/* Display email */}
+          </Box>
           <PhoneIcon sx={{ mr: 0.5 }} />
           <Typography variant="body2" sx={{ mr: 2 }}>{phone}</Typography>
         </Box>
         <Box sx={{ display: 'flex', alignItems: 'center', ml: 2 }}> {/* Separating links slightly */}
-          <Link href={linkedin} color="inherit" sx={{ mr: 2 }}>
+          <a href={linkedin} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', marginRight: 16 }}>
             <LinkedInIcon />
-          </Link>
-          <Link href={github} color="inherit"><GitHubIcon /></Link>
+          </a>
+          <a href={github} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+            <GitHubIcon />
+          </a>
         </Box>
       </Toolbar>
       <Toolbar component="nav" sx={{ justifyContent: 'center', bgcolor: 'grey.800' }}>

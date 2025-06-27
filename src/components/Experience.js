@@ -24,9 +24,9 @@ function Experience({ experiences }) {
                 <Typography color="textSecondary" gutterBottom>
                   {exp.dates}
                 </Typography>
-                <List dense>
+                <List dense sx={{ listStyleType: 'disc', pl: 3 }}>
                   {exp.responsibilities.map((responsibility, idx) => (
-                    <ListItem key={idx}>
+                    <ListItem key={idx} sx={{ display: 'list-item', listStyleType: 'disc' }}>
                       <ListItemText primary={responsibility} />
                     </ListItem>
                   ))}

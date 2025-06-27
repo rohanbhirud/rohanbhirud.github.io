@@ -11,6 +11,7 @@ body {
   max-width: 1200px; /* Increased max-width for slightly wider content */
   margin: 10px auto; /* Reduced top/bottom margin */
   padding: 0; /* Consistent padding on the sides */
+  padding-top: 128px; /* Add top padding to prevent content from being hidden under fixed header */
 }
 
 .header {

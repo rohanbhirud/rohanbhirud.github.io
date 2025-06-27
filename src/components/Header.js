@@ -39,7 +39,7 @@ function Header({ name, linkedin, github, phone, email }) { // Receive the email
           </a>
         </Box>
       </Toolbar>
-      <Toolbar component="nav" sx={{ justifyContent: 'center', bgcolor: 'grey.800' }}>
+      <Toolbar component="nav" sx={{ justifyContent: 'flex-start', bgcolor: 'grey.800' }}>
         <Button color="inherit" sx={{ mx: 1 }} component={Link} to="skills" smooth={true} duration={500} offset={-64}>Skills</Button> {/* These are your navigation links */}
         <Button color="inherit" sx={{ mx: 1 }} component={Link} to="experience" smooth={true} duration={500} offset={-64}>Experience</Button>
         <Button color="inherit" sx={{ mx: 1 }} component={Link} to="education" smooth={true} duration={500} offset={-64}>Education</Button>

@@ -54,18 +54,26 @@ function Header({ name, linkedin, github, phone, email }) {
             <EmailIcon sx={{ mr: 0.5 }} />
             <Typography variant="body2" sx={{ mr: 2 }}>{email}</Typography>
           </Box>
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <Box sx={{ 
+              display: 'flex', 
+              alignItems: 'center',
+              mb: { xs: 1, sm: 0 }
+            }}>
             <PhoneIcon sx={{ mr: 0.5 }} />
             <Typography variant="body2" sx={{ mr: 2 }}>{phone}</Typography>
           </Box>
-        </Box>
-        <Box sx={{ display: 'flex', alignItems: 'center', ml: 2 }}> {/* Separating links slightly */}
-          <a href={linkedin} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', marginRight: 16 }}>
-            <LinkedInIcon />
-          </a>
-          <a href={github} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
-            <GitHubIcon />
-          </a>
+          <Box sx={{ 
+              display: 'flex', 
+              alignItems: 'center',
+              ml: { xs: 0, sm: 2 }
+            }}>
+            <a href={linkedin} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', marginRight: 16 }}>
+              <LinkedInIcon />
+            </a>
+            <a href={github} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+              <GitHubIcon />
+            </a>
+          </Box>
         </Box>
       </Toolbar>
       <Toolbar component="nav" sx={{ justifyContent: 'flex-start', bgcolor: 'grey.800' }}>

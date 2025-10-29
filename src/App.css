@@ -9,9 +9,8 @@ body {
 
 .portfolio-container {
   max-width: 1200px; /* Increased max-width for slightly wider content */
-  margin: 10px auto; /* Reduced top/bottom margin */
-  padding: 0; /* Consistent padding on the sides */
-  padding-top: 128px; /* Add top padding to prevent content from being hidden under fixed header */
+  margin: 0 auto; /* Center the container */
+  padding: 100px 16px 16px; /* Adjusted top padding for fixed header */
 }
 
 .header {
@@ -125,7 +124,7 @@ footer {
   margin-top: 30px; /* Added margin above the footer */
 }
 
-.@media (max-width: 768px) {
+@media (max-width: 768px) {
   .skills ul {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }

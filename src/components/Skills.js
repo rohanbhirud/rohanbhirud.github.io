@@ -3,7 +3,7 @@ import { Box, Typography, Card, CardContent, Paper, Grid } from '@mui/material';
 
 const Skills = ({ skills, id }) => {
   return (
-    <Box id="skills" sx={{ my: 4 }}>
+    <Box id="skills" sx={{ my: 4, mt: { xs: 15, sm: 10 } }}>
       <Paper elevation={3} sx={{ padding: 3 }}>
         <Typography variant="h4" component="h2" gutterBottom color="primary">
  Skills

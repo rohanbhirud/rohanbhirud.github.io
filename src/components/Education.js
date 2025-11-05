@@ -23,7 +23,7 @@ function Education({ educationEntries }) {
               <strong>{entry.degree}</strong> | {entry.dates}
             </Typography>
             <Typography variant="body2" color="text.secondary" style={{ marginBottom: '10px' }}>
-              Grade/CGPA: {entry.grade || entry.cgpa}
+              {(entry.grade || entry.cgpa) && `Grade/CGPA: ${entry.grade || entry.cgpa}`}
             </Typography>
           </CardContent>
         </Card>

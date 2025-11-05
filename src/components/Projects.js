@@ -1,6 +1,5 @@
 import React from 'react';
-import { Card, CardContent, Typography, CardActions, Button } from '@mui/material';
-import GitHubIcon from '@mui/icons-material/GitHub'; // This is a Material UI icon, no path change needed
+import { Card, CardContent, Typography, List, ListItem, ListItemText } from '@mui/material';
 function Projects({ projects }) {
   return (
     <section id="projects">
@@ -21,23 +20,14 @@ function Projects({ projects }) {
             <Typography variant="h6" component="h3" gutterBottom>
               {project.title}
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {project.description}
-            </Typography>
+            <List dense sx={{ listStyleType: 'disc', pl: 3 }}>
+                  {project.description.map((d, idx) => (
+                    <ListItem key={idx} sx={{ display: 'list-item', listStyleType: 'disc' }}>
+                      <ListItemText primary={d} />
+                    </ListItem>
+                  ))}
+                </List>
           </CardContent>
-          <CardActions>
-            {project.liveDemoLink && (
-              <Button size="small" component="a" href={project.liveDemoLink} target="_blank" rel="noopener noreferrer">
-                Live Demo
-              </Button>
-            )}
-            {project.githubLink && (
-              <Button size="small" component="a" href={project.githubLink} target="_blank" rel="noopener noreferrer">
- <GitHubIcon fontSize="small" sx={{ mr: 0.5 }} />
-                GitHub
-              </Button>
-            )}
-          </CardActions>
         </Card>
       ))}
     </section>
